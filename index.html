@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>XYZ Pattern Generator</title>
+</head>
+<body>
+    <div class="main-wrapper">      
+        <div class="option-btn">
+            <button id="input-tab-btn" class="direct-btn option-btn-isActive"><span>INPUTS</span></button>
+            <button id="pattern-tab-btn" class="direct-btn"><span>PATTERNS</span></button>
+            <div class="slider" id="direct-slider"></div>
+        </div>
+        <div class="main-container" id="main-container">
+            <div class="input-container">
+                <div class="inputs-holder">
+                    <h1>XYZ Pattern Generator</h1>
+                    <label for="letters">Enter Letter Combinations X, Y, and Z:</label>
+                    <input type="text" name="letters" id="letter" placeholder="INPUT LETTERS">
+                    <label for="numbers">Enter Odd Number, 3 or Greater Than 3:</label>
+                    <input type="number" name="numbers" id="numberInput" min="3" value="3">
+                    <label for="orientation">Select Orientation:</label>
+                    <select name="orientation" id="orientation">
+                        <option value="h">Horizontal</option>
+                        <option value="v">Vertical</option>
+                    </select>
+                    <div class="buttons">
+                        <button id="submit-btn" class="btn">GENERATE</button>
+                        <button id="reset-btn" class="btn">RESET</button>
+                    </div>
+                </div>
+            </div>
+            <div class="pattern-wrapper">
+                <div class="pattern-container" id="pat-con"></div>
+            </div>
+        </div>
+    </div> 
+    <div class="modal" id="modal">
+        <div class="error-message" id="error-message">
+            <i style="font-size:24px" class="fa" id="close-btn">&#xf00d;</i>
+            <h1>INVALID INPUT</h1>
+            <div class="must">
+                <h2>You Must: </h2>
+                <div class="must-enter">
+                    <p>Enter Letter Combinations X, Y, and Z (Example: XYZ, ZXY, ZZXXXYYYYY)</p>
+                    <p>Enter Odd Numbers, 3 or Greater Than 3  (Example: 3, 5, 7, 9… etc)</p>
+                    <p>Enter Direction of Pattens (Example: horizontal or vertical)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="functions.js"></script>
+</body>
+</html>
